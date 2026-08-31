@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cotizador | MAV Solar</title>
+<meta name="description" content="Calcula en minutos el tamaño de sistema, la inversión estimada y el retorno de una instalación solar en León, Guanajuato, según tu tarifa CFE." />
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.png" alt="MAV Solar" />
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="instalaciones.html">Instalaciones</a></li>
+        <li><a href="cotizador.html" aria-current="page">Cotizador</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--primary btn--sm" href="contacto.html">
+        <span class="btn-label-full">Solicita tu auditoría</span><span>Auditoría</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="padding:56px 0 64px;">
+  <div class="container">
+    <span class="hero-badge">COTIZADOR</span>
+    <h1>¿Cuánto pagaste tu último recibo y bajo qué tarifa?</h1>
+    <p class="lead">Esa es la pregunta que define si eres residencial DAC, comercial PDBT o industrial GDMTH. Contéstala aquí y obtén un rango de sistema, inversión y retorno en menos de dos minutos.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="quote-shell">
+      <form id="cotizador-form" novalidate>
+        <div class="card">
+          <div class="field">
+            <label for="tarifa">¿Bajo qué tarifa de CFE pagas?</label>
+            <select id="tarifa" name="tarifa" required>
+              <option value="">Selecciona tu tarifa</option>
+              <option value="tarifa1">Tarifa 1 — doméstica subsidiada</option>
+              <option value="dac">DAC — doméstica de alto consumo</option>
+              <option value="pdbt">PDBT — comercial (menos de 25 kW)</option>
+              <option value="gdmt">GDMTO / GDMTH — industrial</option>
+            </select>
+            <span class="hint">Si no estás seguro, revisa el recibo de CFE: ahí indica la tarifa.</span>
+          </div>
+
+          <div class="field">
+            <label for="recibo">Monto promedio de tu recibo mensual (MXN)</label>
+            <input type="number" id="recibo" name="recibo" min="0" step="50" placeholder="Ej. 4500" required />
+          </div>
+
+          <div class="field">
+            <label for="tipo_predio">Tipo de predio</label>
+            <select id="tipo_predio" name="tipo_predio">
+              <option value="residencial">Residencial</option>
+              <option value="comercial">Comercial</option>
+              <option value="industrial">Nave industrial</option>
+            </select>
+          </div>
+
+          <div class="field" id="zona-field" style="display:none;">
+            <label for="zona">Colonia o fraccionamiento</label>
+            <select id="zona" name="zona">
+              <option value="">Selecciona tu zona</option>
+              <option>El Campestre</option>
+              <option>Gran Jardín</option>
+              <option>Cerro Gordo</option>
+              <option>Cumbres del Campestre</option>
+              <option>Jardines del Moral</option>
+              <option>Punto Verde</option>
+              <option>León Moderno</option>
+              <option>Otra zona de León</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Calcular estimación</button>
+          <p class="hint" style="margin-top:12px;">Este cálculo usa rangos de mercado de la región (León, Gto.) y es solo orientativo. No sustituye una visita técnica ni una propuesta de ingeniería formal.</p>
+        </div>
+      </form>
+
+      <div class="quote-result" id="cotizador-resultado">
+        <!-- Resultado generado por assets/js/cotizador.js -->
+      </div>
+    </div>
+
+    <div class="card" id="cotizador-cta" style="margin-top:32px; text-align:center; padding:40px;">
+      <h2>¿Te sirvió el estimado?</h2>
+      <p class="lead" style="margin:0 auto 20px;">El siguiente paso es una auditoría real: enviamos tu recibo CFE y, si aplica, el diagrama unifilar, y te devolvemos una propuesta preliminar en 24 horas.</p>
+      <div class="actions" style="justify-content:center;">
+        <a class="btn btn--primary" href="contacto.html">Solicitar propuesta con estos datos</a>
+        <a
+          class="btn btn--whatsapp"
+          href="https://wa.me/524770000000?text=Hola%20MAV%20Solar%2C%20us%C3%A9%20el%20cotizador%20del%20sitio%20y%20quiero%20una%20propuesta%20real."
+          target="_blank" rel="noopener"
+        >Continuar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/img/logo.png" alt="MAV Solar" style="height:52px; width:auto; margin-bottom:14px;" />
+      <p class="muted" style="color:rgba(255,255,255,0.7); max-width:320px;">Ingeniería eléctrica industrial aplicada a energía solar y almacenamiento en León, Guanajuato. Un proyecto de MAV Ingeniería.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul class="footer-links">
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="instalaciones.html">Instalaciones</a></li>
+        <li><a href="cotizador.html">Cotizador</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li>[TELÉFONO / WHATSAPP]</li>
+        <li>[CORREO@mavsolar.mx]</li>
+        <li>León, Guanajuato, México</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> MAV Solar. Todos los derechos reservados.</span>
+    <span>Mejorando las ideas en energía solar.</span>
+  </div>
+</footer>
+
+<a
+  class="wa-float"
+  href="https://wa.me/524770000000?text=Hola%20MAV%20Solar%2C%20us%C3%A9%20el%20cotizador%20del%20sitio%20y%20quiero%20una%20propuesta%20real."
+  target="_blank"
+  rel="noopener"
+  aria-label="Escribir por WhatsApp"
+>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.38 1.26 4.79L2 22l5.44-1.42a9.9 9.9 0 0 0 4.6 1.15h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.06c-.24.68-1.39 1.32-1.92 1.4-.49.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.11-4.87-4.3-.14-.2-1.17-1.56-1.17-2.98s.72-2.11 1-2.4c.24-.26.53-.32.71-.32h.5c.16 0 .38-.03.58.44.24.58.81 2 .88 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.3 2.33 1.45.29.15.46.13.63-.08.17-.2.72-.84.92-1.13.19-.29.39-.24.65-.15.27.1 1.68.79 1.97.94.29.15.48.22.55.34.07.13.07.75-.17 1.42z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cotizador.js"></script>
+
+<!--
+  TODO(MAV Solar): activar el chat automatizado con Tidio (ver index.html
+  para instrucciones completas) pegando aquí el mismo script en todas las
+  páginas del sitio.
+-->
+</body>
+</html>

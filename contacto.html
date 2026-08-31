@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contacto | MAV Solar</title>
+<meta name="description" content="Solicita tu auditoría gratuita de prefactibilidad, una propuesta técnica o agenda una llamada con un ingeniero de MAV Solar en León, Guanajuato." />
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.png" alt="MAV Solar" />
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="instalaciones.html">Instalaciones</a></li>
+        <li><a href="cotizador.html">Cotizador</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--primary btn--sm" href="#formulario">
+        <span class="btn-label-full">Ir al formulario</span><span>Formulario</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="padding:56px 0 64px;">
+  <div class="container">
+    <span class="hero-badge">CONTACTO</span>
+    <h1>Empecemos por el diagnóstico</h1>
+    <p class="lead">Tres formas de avanzar: agenda tu auditoría directamente en el calendario, escríbenos por WhatsApp para una respuesta inmediata, o completa el formulario si prefieres que te llamemos con una propuesta.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--3">
+      <div class="card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 14px;">📅</div>
+        <h3>Agenda tu auditoría</h3>
+        <p class="muted">Elige día y hora directamente en el calendario. Ideal si ya tienes tu recibo CFE a la mano.</p>
+        <a class="btn btn--outline-dark btn--sm" href="#calendario">Ver horarios</a>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 14px;">💬</div>
+        <h3>Escríbenos por WhatsApp</h3>
+        <p class="muted">Respuesta en menos de 5 minutos en horario hábil. Te pediremos recibo CFE y, si aplica, diagrama unifilar.</p>
+        <a class="btn btn--sm btn--whatsapp" href="https://wa.me/524770000000?text=Hola%20MAV%20Solar%2C%20quiero%20una%20auditor%C3%ADa%20gratuita%20de%20prefactibilidad." target="_blank" rel="noopener">Abrir WhatsApp</a>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 14px;">📝</div>
+        <h3>Pide una propuesta o llamada</h3>
+        <p class="muted">Completa el formulario con los datos de tu proyecto y te contactamos nosotros.</p>
+        <a class="btn btn--outline-dark btn--sm" href="#formulario">Ir al formulario</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="calendario">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Agenda directa</span>
+      <h2>Reserva tu auditoría de prefactibilidad</h2>
+      <p class="muted">Este calendario se conecta con Calendly (plan gratuito). Sustituye la URL de ejemplo por la agenda real de MAV Solar.</p>
+    </div>
+    <!--
+      TODO(MAV Solar): reemplazar la URL de ejemplo por la real de Calendly,
+      p. ej. https://calendly.com/mav-solar/auditoria-gratuita
+      Documentación: https://help.calendly.com/hc/en-us/articles/223147027
+    -->
+    <div class="card" style="padding:0; overflow:hidden;">
+      <iframe
+        title="Agenda tu auditoría con MAV Solar"
+        src="https://calendly.com/mav-solar/auditoria-gratuita?hide_gdpr_banner=1"
+        width="100%"
+        height="700"
+        style="border:0; display:block;"
+        loading="lazy"
+      ></iframe>
+    </div>
+    <p class="placeholder-note">Mientras se configura la cuenta de Calendly, este bloque puede sustituirse temporalmente por un botón directo a WhatsApp.</p>
+  </div>
+</section>
+
+<section class="section" id="formulario">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Formulario</span>
+      <h2>Solicita una propuesta o una llamada personal</h2>
+      <p class="muted">Entre más datos técnicos incluyas (recibo CFE, diagrama unifilar), más rápida y precisa será la propuesta.</p>
+    </div>
+
+    <div class="card" style="max-width:760px;">
+      <!--
+        TODO(MAV Solar): crear cuenta gratuita en https://web3forms.com/ con el
+        correo de la empresa y reemplazar WEB3FORMS_ACCESS_KEY_AQUI por el
+        Access Key real que Web3Forms envía por correo. No requiere backend.
+      -->
+      <form id="contacto-form" data-web3forms novalidate>
+        <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_AQUI" />
+        <input type="hidden" name="subject" value="Nueva solicitud desde el sitio de MAV Solar" />
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="field">
+            <label for="empresa">Empresa (si aplica)</label>
+            <input type="text" id="empresa" name="empresa" />
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" required />
+          </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required />
+          </div>
+          <div class="field">
+            <label for="tarifa_contacto">Tarifa CFE (si la conoces)</label>
+            <select id="tarifa_contacto" name="tarifa_cfe">
+              <option value="">No estoy seguro</option>
+              <option value="tarifa1">Tarifa 1</option>
+              <option value="dac">DAC</option>
+              <option value="pdbt">PDBT</option>
+              <option value="gdmt">GDMTO / GDMTH</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tipo_solicitud">¿Qué necesitas?</label>
+            <select id="tipo_solicitud" name="tipo_solicitud">
+              <option value="auditoria">Auditoría gratuita de prefactibilidad</option>
+              <option value="propuesta">Propuesta técnica</option>
+              <option value="llamada">Llamada con un ingeniero</option>
+              <option value="mantenimiento">Mantenimiento de sistema existente</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="mensaje">Cuéntanos tu caso</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Ej. Planta de calzado con cargo alto por demanda en horario punta, buscamos reducirlo con solar + almacenamiento."></textarea>
+          </div>
+          <div class="field full">
+            <label for="adjunto">Adjuntar recibo CFE o diagrama unifilar (opcional)</label>
+            <input type="file" id="adjunto" name="attachment" accept=".pdf,.jpg,.jpeg,.png" />
+            <span class="hint">Acelera la propuesta, pero no es obligatorio para enviar el formulario.</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block" style="margin-top:10px;">Enviar solicitud</button>
+        <div class="form-status" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/img/logo.png" alt="MAV Solar" style="height:52px; width:auto; margin-bottom:14px;" />
+      <p class="muted" style="color:rgba(255,255,255,0.7); max-width:320px;">Ingeniería eléctrica industrial aplicada a energía solar y almacenamiento en León, Guanajuato. Un proyecto de MAV Ingeniería.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul class="footer-links">
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="instalaciones.html">Instalaciones</a></li>
+        <li><a href="cotizador.html">Cotizador</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li>[TELÉFONO / WHATSAPP]</li>
+        <li>[CORREO@mavsolar.mx]</li>
+        <li>León, Guanajuato, México</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> MAV Solar. Todos los derechos reservados.</span>
+    <span>Mejorando las ideas en energía solar.</span>
+  </div>
+</footer>
+
+<a
+  class="wa-float"
+  href="https://wa.me/524770000000?text=Hola%20MAV%20Solar%2C%20quiero%20una%20auditor%C3%ADa%20gratuita%20de%20prefactibilidad."
+  target="_blank"
+  rel="noopener"
+  aria-label="Escribir por WhatsApp"
+>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.38 1.26 4.79L2 22l5.44-1.42a9.9 9.9 0 0 0 4.6 1.15h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.06c-.24.68-1.39 1.32-1.92 1.4-.49.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.11-4.87-4.3-.14-.2-1.17-1.56-1.17-2.98s.72-2.11 1-2.4c.24-.26.53-.32.71-.32h.5c.16 0 .38-.03.58.44.24.58.81 2 .88 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.3 2.33 1.45.29.15.46.13.63-.08.17-.2.72-.84.92-1.13.19-.29.39-.24.65-.15.27.1 1.68.79 1.97.94.29.15.48.22.55.34.07.13.07.75-.17 1.42z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+
+<!--
+  TODO(MAV Solar): activar el chat automatizado con Tidio (ver index.html
+  para instrucciones completas) pegando aquí el mismo script en todas las
+  páginas del sitio.
+-->
+</body>
+</html>
